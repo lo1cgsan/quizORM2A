@@ -21,7 +21,7 @@ baza = SqliteDatabase(app.config['DATABASE'])
 @app.before_request
 def before_request():
     g.db = baza
-    g.db.get_conn()
+    g.db.connect()
 
 
 @app.after_request
